@@ -55,6 +55,9 @@ Source of truth for every number: `~/workspace/goals/0dte-qqq-project/files/MODE
 ## Site files beyond the daily workflow
 
 - `robots.txt`: allows all crawlers and points them at the sitemap. Static. The daily jobs do not maintain it.
-- `sitemap.xml`: lists the ledger (`https://0dtepick.com/`) and the history page (`https://0dtepick.com/history.html`). Static. Update the lastmod dates by hand when a listed page changes materially.
+- `sitemap.xml`: lists the ledger (`https://0dtepick.com/`), the history page, the archive, and every per-day page. Static. Update the lastmod dates by hand when a listed page changes materially, and add a day page here when one is created.
 - `history.html`: the history of the experiment, linked from the ledger footer. Its day-by-day list is updated manually at milestones. It is not one of the five machine-updated elements listed in the afternoon update, and the daily jobs do not maintain it.
+- `archive.html`: the index of every graded day, linked from the ledger footer and from `history.html`, listing each day with its result pill and linking to that day's own page. Static between day-page additions.
+- `days/day-NN.html`: one page per graded day, carrying the full graded row (the three price columns under their Entry, Peak, and Expiration labels), the shadow result, and the one-line lesson recorded in that day's autopsy. Day pages for future days are added by the daily publishing flow only when instructed; for now they are manual, milestone files like `history.html`, and the daily jobs do not maintain them.
+- `og-image.png`: the 1200 by 630 share image referenced by the Open Graph tags on every page. Static. It is a binary file, so it does not travel the text-only snapshot push route; it was pushed over git SSH.
 - `favicon.svg`: the site icon, a dark rounded square with an amber 0, referenced from the head of both pages. Static.
