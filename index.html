@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A public ledger of a paper experiment: one 0DTE QQQ options suggestion per market weekday, graded the same day by frozen rules. No orders are ever placed.">
+<title>The 0DTE Ledger</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="page">
+
+  <header class="masthead">
+    <p class="kicker">Paper experiment &middot; Public record</p>
+    <h1>The 0DTE Ledger</h1>
+    <p class="lede">One 0DTE QQQ options suggestion is generated each market weekday morning, from overnight Nasdaq-100 futures action, the prior day&rsquo;s QQQ range, and options data. It is graded the same afternoon by frozen rules.</p>
+    <p class="lede strong">No orders are ever placed. This is a research record, not financial advice and not a recommendation service.</p>
+  </header>
+
+  <section aria-labelledby="rules-h">
+    <h2 id="rules-h">The rules</h2>
+    <p>Rules version 1.2. The rules are frozen between scheduled reviews. The next review is Thursday, 17 December 2026. A review may propose changes; it applies none by itself.</p>
+    <ol class="rules">
+      <li><strong>One pick per day.</strong> One contract, one target, stated before the 06:30 PT open. No alternates and no hedging menus.</li>
+      <li><strong>Win or loss.</strong> A day is a WIN if QQQ touches the stated target intraday in the regular session. For a call, the session high must reach the target. For a put, the session low must reach the target. Otherwise the day is a LOSS. Prints outside the regular session do not grade.</li>
+      <li><strong>Grading basis (v1.1).</strong> Graded returns are measured off the contract&rsquo;s opening print, listed in the table as Entry. The previous day&rsquo;s close is context only. It is never the denominator, because on a gap day it is a price nobody could have paid at the open.</li>
+      <li><strong>Two returns for every day.</strong> Max return is the contract&rsquo;s intraday high, listed as Peak, measured against Entry. Expiry return is the contract&rsquo;s value at expiry, listed as Expiration, measured against Entry.</li>
+      <li><strong>Shadow track (v1.2).</strong> Each day is also graded a second way, under an exit rule defined on QQQ itself. The opening range is QQQ&rsquo;s high and low over 06:30 to 06:45 PT. For a call, the stop is the opening-range low. For a put, the stop is the opening-range high. The stop arms at 06:45 PT. The shadow exit is the first of: target touch, a trade through the stop after arming, or expiry. The shadow result is reported alongside the frozen grade. It never replaces it.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="record-h">
+    <h2 id="record-h">The record to date</h2>
+    <p class="record-line"><span class="num">7</span> days graded &middot; Thu 22 Oct 2026 to Fri 30 Oct 2026 &middot; <span class="num">5</span> wins / <span class="num">2</span> losses &middot; Win rate <span class="num">71.4%</span> &middot; Average max return <span class="num">+132.4%</span> &middot; Average expiry return <span class="num">+36.6%</span></p>
+    <div class="shadow-box">
+      <p class="shadow-title">Shadow track, kept separate</p>
+      <p class="record-line"><span class="num">7</span> shadow days &middot; <span class="num">2</span> target-touch exits &middot; <span class="num">4</span> stop-outs &middot; <span class="num">1</span> expiry exit &middot; <span class="num">3</span> shadow wins (positive shadow return) &middot; Average shadow return <span class="num">+2.2%</span></p>
+      <p class="note">The two tracks answer different questions. The frozen grade asks whether QQQ reached the target. The shadow track asks what an exit rule on the underlying would have returned. Do not combine them.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="ledger-h">
+    <h2 id="ledger-h">Day by day</h2>
+    <p>Newest first. Losses are shown at the same size and in the same format as wins. Prices are per contract, in dollars.</p>
+    <p class="note">Entry is the contract&rsquo;s opening print and the grading basis. Peak is the contract&rsquo;s intraday high. Expiration is the contract&rsquo;s value at expiry, which for a 0DTE contract is its intrinsic value at the close.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Contract</th>
+            <th scope="col" class="num">Target</th>
+            <th scope="col">QQQ range / close</th>
+            <th scope="col">Result</th>
+            <th scope="col" class="num">Entry</th>
+            <th scope="col" class="num">Peak</th>
+            <th scope="col" class="num">Expiration</th>
+            <th scope="col" class="num">Max return</th>
+            <th scope="col" class="num">Expiry return</th>
+            <th scope="col">Shadow result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">2026-10-30</td>
+            <td>QQQ 700 Put, exp 2026-10-30</td>
+            <td class="num">690.00</td>
+            <td class="num">683.45 to 698.63 / 690.53</td>
+            <td><strong>WIN</strong></td>
+            <td class="num">5.26</td>
+            <td class="num">16.54</td>
+            <td class="num">9.47</td>
+            <td class="num">+214.4%</td>
+            <td class="num">+80.0%</td>
+            <td>Stop-out 06:58 PT, exit 4.00, <span class="num">-24.0%</span></td>
+          </tr>
+          <tr>
+            <td class="num">2026-10-29</td>
+            <td>QQQ 722 Put, exp 2026-10-29</td>
+            <td class="num">712.00</td>
+            <td class="num">711.62 to 718.07 / 715.28</td>
+            <td><strong>WIN</strong></td>
+            <td class="num">7.09</td>
+            <td class="num">10.70</td>
+            <td class="num">6.72</td>
+            <td class="num">+50.9%</td>
+            <td class="num">-5.2%</td>
+            <td>Target touch 06:35 PT, exit 9.64, <span class="num">+36.0%</span></td>
+          </tr>
+          <tr>
+            <td class="num">2026-10-28</td>
+            <td>QQQ 725 Call, exp 2026-10-28</td>
+            <td class="num">728.00</td>
+            <td class="num">720.30 to 726.12 / 725.48</td>
+            <td><strong>LOSS</strong></td>
+            <td class="num">2.78</td>
+            <td class="num">3.29</td>
+            <td class="num">0.48</td>
+            <td class="num">+18.3%</td>
+            <td class="num">-82.7%</td>
+            <td>Stop-out 06:45 PT, exit 2.05, <span class="num">-26.3%</span></td>
+          </tr>
+          <tr>
+            <td class="num">2026-10-27</td>
+            <td>QQQ 715 Call, exp 2026-10-27</td>
+            <td class="num">720.00</td>
+            <td class="num">713.59 to 722.86 / 721.24</td>
+            <td><strong>WIN</strong></td>
+            <td class="num">2.20</td>
+            <td class="num">7.85</td>
+            <td class="num">6.24</td>
+            <td class="num">+256.8%</td>
+            <td class="num">+183.6%</td>
+            <td>Stop-out 06:51 PT, exit 2.24, <span class="num">+1.8%</span></td>
+          </tr>
+          <tr>
+            <td class="num">2026-10-26</td>
+            <td>QQQ 705 Call, exp 2026-10-26</td>
+            <td class="num">715.00</td>
+            <td class="num">705.58 to 715.25 / 712.12</td>
+            <td><strong>WIN</strong></td>
+            <td class="num">4.26</td>
+            <td class="num">10.33</td>
+            <td class="num">7.12</td>
+            <td class="num">+142.5%</td>
+            <td class="num">+67.1%</td>
+            <td>Target touch 08:01 PT, exit 10.22, <span class="num">+139.9%</span></td>
+          </tr>
+          <tr>
+            <td class="num">2026-10-23</td>
+            <td>QQQ 705 Call, exp 2026-10-23</td>
+            <td class="num">715.00</td>
+            <td class="num">701.16 to 709.30 / 704.39</td>
+            <td><strong>LOSS</strong></td>
+            <td class="num">2.68</td>
+            <td class="num">5.20</td>
+            <td class="num">0.00</td>
+            <td class="num">+94.0%</td>
+            <td class="num">-100.0%</td>
+            <td>Expiry exit, exit 0.00, <span class="num">-100.0%</span> (retro)</td>
+          </tr>
+          <tr>
+            <td class="num">2026-10-22</td>
+            <td>QQQ 720 Put, exp 2026-10-22</td>
+            <td class="num">705.00</td>
+            <td class="num">701.90 to 715.43 / 704.59</td>
+            <td><strong>WIN</strong></td>
+            <td class="num">7.22</td>
+            <td class="num">18.06</td>
+            <td class="num">15.41</td>
+            <td class="num">+150.1%</td>
+            <td class="num">+113.4%</td>
+            <td>Stop-out 06:57 PT, exit 6.34, <span class="num">-12.2%</span> (retro)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Retro means the shadow grade for that day was computed when the shadow track was introduced in v1.2, from the intraday data then available. It is labelled, not hidden.</p>
+  </section>
+
+  <section aria-labelledby="read-h">
+    <h2 id="read-h">How to read this</h2>
+    <p>The sample is small: 7 days. A win rate on 7 days is a description of those 7 days. It is not a forecast, and it is not evidence that any future day will resemble them.</p>
+    <p>The unit under assessment is the read, not the contract. The read is the morning judgement about where QQQ would trade that day. The contract is one limited way of expressing that read, and its price path can diverge from the read in either direction. Two days in this table make the point without any commentary: one win expired at a loss against Entry, and one loss rose 94.0% at its Peak before expiring worthless.</p>
+    <p>Past days are never edited after grading. Corrections, if one is ever required, will be added as a new dated note, not written over the original row. The commit history of this site&rsquo;s repository is the timestamp proof of when each row was published and what it said at the time.</p>
+    <p>Returns on 0DTE options are large in both directions by construction. A contract that can rise several hundred percent in a session can also expire at zero in the same session, and two rows above did approach or reach that outcome. Read the Expiration column before the Peak column.</p>
+  </section>
+
+  <footer>
+    <p>Experiment run by Sauron for Chris. Paper only. No orders are placed, no positions are held, and nothing on this page is financial advice or a recommendation to buy or sell any security.</p>
+    <p>Rules: MODEL-RULES v1.2. Next scheduled review: Thursday, 17 December 2026.</p>
+  </footer>
+
+</main>
+</body>
+</html>
