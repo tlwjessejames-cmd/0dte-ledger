@@ -24,12 +24,21 @@ Source of truth for every number: `~/workspace/goals/0dte-qqq-project/files/MODE
    - Expiry return: Expiration against Entry, as recorded in the tracker.
    - Shadow result: exit trigger, exit time PT, exit price, and shadow return, from the shadow ledger. Label it retro if it was ever computed after the fact.
 3. Update the Record section from the tracker Record sheet. The summary figures live in the record banner: the six `.stat-value` values, in order: days graded, wins, losses, win rate, average max return, average expiry return. The `.banner-dates` line carries the first and last graded dates, in the format `Thu 22 Oct 2026 to Fri 30 Oct 2026`. Then update the shadow box separately from the shadow ledger: shadow days, target-touch exits, stop-outs, expiry exits, shadow wins, average shadow return. Keep the two tracks in their separate blocks.
+
+   The graded-day count appears in exactly five places on the page. Every one of them is a machine-updated element, every one is updated at every grading from the tracker, and if any one disagrees with the tracker the page is wrong:
+   - the day-by-day table itself: one row per graded day;
+   - the `.banner-dates` line in the record banner: the first and last graded dates;
+   - the first record banner stat, `Days graded`: the count itself;
+   - the first figure of the shadow box `.record-line`: the shadow-day count;
+   - the expiry-return chart: one bar per graded day, and the viewBox width, which is computed from the count (see step 4).
+
+   No other text on the page states the count, and no edit may add one that does. See the standing rule on narrative prose below.
 4. Rebuild the expiry-return chart (the `figure.chart` block after the table) from the graded table. Geometry is fixed; do not improvise it:
    - One bar per graded day, chronological order, oldest first (the reverse of the table order). Each bar's value and label are exactly that day's Expiry return string from the table.
    - Scale is linear: 0.62 px per percentage point. The 0% line is at y=132. Gridlines at +100% (y=70.0), 0% (y=132.0), and -100% (y=194.0), drawn from x=48 to viewBox width minus 20, with axis labels right-anchored at x=42.
    - Bars are 54 px wide on an 82 px pitch; the first bar starts at x=48. A positive bar (class `bar-pos`) rises from the zero line; a negative bar (class `bar-neg`) hangs below it. Each `rect` carries a `<title>YYYY-MM-DD: value</title>`.
    - Value labels (class `val`) sit centered over the bar: 6 px above a positive bar's top, 14 px below a negative bar's bottom. Date labels (class `axis`, format `DD Oct`) sit centered under each bar at y=224.
-   - viewBox width is 82 times the number of graded days, plus 66 (640 at 7 days). viewBox height is always 232.
+   - viewBox width is 82 times the number of graded days, plus 66 (640 when the count is 7). Always compute it from the current count; never carry the previous width forward. viewBox height is always 232.
 5. If a past figure was wrong, do not overwrite the row silently. Add a dated correction note below the table and commit it as its own commit explaining the change.
 6. Commit with a message naming the date and result, for example: `Day 8 graded: 2026-11-02 WIN, expiry +80.0%, shadow -24.0%`.
 
@@ -40,4 +49,5 @@ Source of truth for every number: `~/workspace/goals/0dte-qqq-project/files/MODE
 - Entry, Peak, and Expiration are always the three price columns, in that order, with exactly those labels.
 - The chart is rebuilt from the table at every grading update. Its values must match the Expiry return column exactly, and its bar order is always chronological.
 - No language beyond the frozen format: no commentary, no forecasts, and no advice anywhere on the page. The autopsy reasoning stays in the project files, not on the site.
+- Narrative prose must never hard-code the sample size. The graded-day count lives only in the five machine-updated elements listed in afternoon step 3. Prose that needs the sample size refers the reader to the record banner instead of stating a number: the 'How to read this' section is worded that way on purpose, including its illustrations drawn from permanent rows, which are phrased without counting them. Do not "fix" that wording by inserting a number; a number in prose is a number that goes stale at the next grading.
 - Rules text on the page changes only when MODEL-RULES.md changes at a scheduled review. Next review: Thu 2026-12-17.
