@@ -51,3 +51,10 @@ Source of truth for every number: `~/workspace/goals/0dte-qqq-project/files/MODE
 - No language beyond the frozen format: no commentary, no forecasts, and no advice anywhere on the page. The autopsy reasoning stays in the project files, not on the site.
 - Narrative prose must never hard-code the sample size. The graded-day count lives only in the five machine-updated elements listed in afternoon step 3. Prose that needs the sample size refers the reader to the record banner instead of stating a number: the 'How to read this' section is worded that way on purpose, including its illustrations drawn from permanent rows, which are phrased without counting them. Do not "fix" that wording by inserting a number; a number in prose is a number that goes stale at the next grading.
 - Rules text on the page changes only when MODEL-RULES.md changes at a scheduled review. Next review: Thu 2026-12-17.
+
+## Site files beyond the daily workflow
+
+- `robots.txt`: allows all crawlers and points them at the sitemap. Static. The daily jobs do not maintain it.
+- `sitemap.xml`: lists the ledger (`https://0dtepick.com/`) and the history page (`https://0dtepick.com/history.html`). Static. Update the lastmod dates by hand when a listed page changes materially.
+- `history.html`: the history of the experiment, linked from the ledger footer. Its day-by-day list is updated manually at milestones. It is not one of the five machine-updated elements listed in the afternoon update, and the daily jobs do not maintain it.
+- `favicon.svg`: the site icon, a dark rounded square with an amber 0, referenced from the head of both pages. Static.

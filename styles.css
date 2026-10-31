@@ -257,6 +257,26 @@ footer {
 
 footer p { margin: 0 0 6px; }
 
+/* Links and history page */
+
+.text-link { color: var(--accent); }
+
+.history-list { max-width: 78ch; padding-left: 22px; }
+.history-list li { margin-bottom: 8px; }
+
+.maxim {
+  max-width: 68ch;
+  margin: 20px 0;
+  padding: 14px 18px;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
 /* Responsive */
 
 @media (max-width: 860px) {
