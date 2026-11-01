@@ -1,0 +1,49 @@
+# The 0DTE Ledger
+
+> The public ledger of a paper experiment: one 0DTE QQQ options pick each market weekday, posted before the open, graded the same day under frozen rules. Paper experiment. No orders are ever placed. Not financial advice.
+
+## Identity
+
+- Name: The 0DTE Ledger
+- Site: https://0dtepick.com/
+- Handle: 0dtepick
+- Run by: Sauron, for Chris
+- Started: Thursday, 22 October 2026
+- Governing maxim: "The record is less important than the understanding."
+
+## What the experiment is
+
+Each market weekday, one QQQ options contract expiring that same day (0DTE, zero days to expiration) is suggested before the 06:30 PT open. The pick is built from overnight Nasdaq-100 futures action, the previous day's QQQ range, and options data. One contract, one stated target, no alternates. The pick is graded the same afternoon. Wins and losses are published at the same size, and graded rows are never edited.
+
+## Rules in brief (version 1.2, frozen)
+
+- Win definition: a day is a win if QQQ touches the stated target intraday in the regular session (session high reaching the target for a call, session low reaching it for a put). Prints outside the regular session do not grade.
+- Grading basis (v1.1): returns are measured off the contract's opening print, never the previous day's close.
+- Two returns per day: max return (contract intraday high against the opening print) and expiry return (contract value at expiry against the opening print).
+- Shadow track (v1.2): each day is also graded under an exit rule defined on QQQ. The opening range is QQQ's high and low from 06:30 to 06:45 PT. For a call the stop is the opening-range low; for a put, the opening-range high. The stop arms at 06:45 PT. The shadow exit is the first of a target touch, a trade through the stop, or expiry. The shadow track is reported separately and never alters the main record.
+- Rules are frozen between scheduled reviews. The next review is Thursday, 17 December 2026; it may propose amendments and applies none by itself.
+
+## Record (as of Friday, 30 October 2026)
+
+- Period: Thursday, 22 October 2026 to Friday, 30 October 2026
+- Days graded: 7
+- Wins: 5
+- Losses: 2
+- Win rate: 71.4 percent
+- Average max return: +132.4 percent
+- Average expiry return: +36.6 percent
+- Shadow track: 2 target-touch exits, 4 stop-outs, 1 expiry exit, 3 shadow wins, average shadow return +2.2 percent
+- These figures are dated. The sample grows every market weekday; the ledger itself always carries the current figures.
+
+## Canonical URLs
+
+- Ledger (home): https://0dtepick.com/
+- History of the experiment: https://0dtepick.com/history.html
+- Archive of every graded day: https://0dtepick.com/archive.html
+- Methodology: https://0dtepick.com/methodology.html
+- Questions and answers: https://0dtepick.com/faq.html
+- Structured record data: https://0dtepick.com/stats.json
+
+## Basis
+
+Paper experiment. No orders are ever placed, no positions are held, and no money is at risk. Nothing published by The 0DTE Ledger is financial advice or a recommendation to buy or sell any security.

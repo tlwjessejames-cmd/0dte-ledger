@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The methodology of The 0DTE Ledger: how each daily 0DTE QQQ pick is constructed, how it is graded, and how the shadow exit-rule track works. Rules v1.2, frozen.">
+<link rel="canonical" href="https://0dtepick.com/methodology.html">
+<meta property="og:title" content="Methodology &middot; The 0DTE Ledger">
+<meta property="og:description" content="The frozen rules of the 0DTE Ledger paper experiment, stated in plain factual form: pick construction, grading basis, win definition, and the shadow track.">
+<meta property="og:url" content="https://0dtepick.com/methodology.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://0dtepick.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://0dtepick.com/og-image.png">
+<meta name="twitter:title" content="Methodology &middot; The 0DTE Ledger">
+<meta name="twitter:description" content="The frozen rules of the 0DTE Ledger paper experiment, stated in plain factual form: pick construction, grading basis, win definition, and the shadow track.">
+<meta name="theme-color" content="#0a0d10">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Methodology &middot; The 0DTE Ledger</title>
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebPage", "name": "Methodology", "url": "https://0dtepick.com/methodology.html", "isPartOf": {"@type": "WebSite", "name": "The 0DTE Ledger", "url": "https://0dtepick.com/"}, "description": "The frozen rules of the 0DTE Ledger paper experiment: pick construction, grading basis, win definition, and the shadow exit-rule track."}
+</script>
+</head>
+<body>
+<main class="page">
+
+  <header class="masthead">
+    <p class="kicker">Paper experiment &middot; Public record</p>
+    <h1>Method<span class="accent">ology</span></h1>
+    <p class="lede">The rules of the experiment, stated in plain factual form. This page is the citable statement of how each pick is constructed and graded.</p>
+    <p class="lede strong">The experiment is paper only. No orders are ever placed. Nothing on this page is financial advice or a recommendation to buy or sell any security.</p>
+  </header>
+
+  <section aria-labelledby="frozen-h">
+    <h2 id="frozen-h">Status of the rules</h2>
+    <p>The rules are version 1.2 of the project document MODEL-RULES. They are frozen between scheduled reviews. Rule changes happen only at a review. The next scheduled review is Thursday, 17 December 2026. A review may propose amendments; it applies none by itself.</p>
+    <p>The experiment began on Thursday, 22 October 2026. Its governing maxim, set by the person who commissioned it, is: &ldquo;The record is less important than the understanding.&rdquo;</p>
+  </section>
+
+  <section aria-labelledby="pick-h">
+    <h2 id="pick-h">How each pick is constructed</h2>
+    <p>One suggestion is produced each market weekday and delivered before the 06:30 PT open. A suggestion counts only if it is delivered before the open. If US equities are closed that day, no suggestion is produced.</p>
+    <p>The morning inputs are:</p>
+    <ul>
+      <li>Overnight Nasdaq-100 futures (NQ): level, change against the prior settle, and the overnight high and low.</li>
+      <li>QQQ: the previous day&rsquo;s open, high, low, close and range, plus the premarket indication.</li>
+      <li>The day&rsquo;s economic calendar and any index-level news.</li>
+      <li>Options data for QQQ contracts expiring that day: strikes, prices, and chain data from the data source.</li>
+    </ul>
+    <p>From those inputs, one directional thesis is formed for the day. The thesis states a target: the QQQ price expected to be reached intraday. For a call thesis the target is an expected peak. For a put thesis the target is an expected low. The basis for the target is stated in the reasoning, drawn from the overnight NQ translation, the prior-day range, level confluence, or a catalyst. A target may not sit inside the overnight noise band unless the reasoning says why.</p>
+    <p>One contract is then selected. The contract is a QQQ call or put, per the thesis, expiring the same day. The strike lies between the previous close and the target, inclusive, when such a strike exists. Otherwise the nearest listed strike to the target is used.</p>
+    <p>Each suggestion carries one or more reason tags, drawn from a fixed set: MISPRICING, CONFLUENCE, WHALE_FLOW, OVERNIGHT_GAP, TREND, MEAN_REVERSION, NEWS_CATALYST, RANGE_PLAY. A tag must be earned by the data in the reasoning. There are no alternates and no hedging menus. One contract, one target, one thesis.</p>
+  </section>
+
+  <section aria-labelledby="grading-h">
+    <h2 id="grading-h">How each pick is graded</h2>
+    <p>Grading happens the same day, after the 13:00 PT close.</p>
+    <p><strong>Win definition.</strong> A day is a win if QQQ touches the stated target intraday in the regular session. For a call, the session high must reach the target. For a put, the session low must reach the target. Otherwise the day is a loss. Prints outside the regular session do not grade.</p>
+    <p><strong>Grading basis (rule v1.1).</strong> Graded returns are measured off the contract&rsquo;s opening print: the first traded price at or after the 06:30 PT open. The site lists this figure as Entry. The previous day&rsquo;s close is recorded as context only and is never the denominator, because on a gap day it is a price nobody could have paid at the open.</p>
+    <p><strong>Two returns per day.</strong> Max return is the contract&rsquo;s intraday high, listed as Peak, measured against Entry. Expiry return is the contract&rsquo;s value at expiry, listed as Expiration, measured against Entry. A 0DTE contract&rsquo;s value at expiry is its intrinsic value. Both returns are recorded for every day, win or loss.</p>
+    <p><strong>Autopsy.</strong> Every graded day carries an autopsy. On a loss, it names the specific assumption that was flawed or the specific event that was not predicted. On a win, it names what the read got right and what part was luck. The unit under assessment is the read, the morning judgement about where QQQ would trade. The contract is one limited way of expressing that read.</p>
+    <p><strong>Immutability.</strong> Rows are immutable after delivery except for the grading columns. Graded rows are never edited. A correction, if one is ever required, is added as a new dated note rather than written over the original row.</p>
+  </section>
+
+  <section aria-labelledby="shadow-h">
+    <h2 id="shadow-h">The shadow track (rule v1.2)</h2>
+    <p>Since 26 October 2026, each day is also graded a second way, under an exit rule defined on QQQ itself. The shadow track runs in a separate ledger. It never alters the main record.</p>
+    <ol class="rules">
+      <li><strong>Shadow entry.</strong> The same basis as the main grade: the contract&rsquo;s opening print.</li>
+      <li><strong>Opening range.</strong> QQQ&rsquo;s high and low over the first fifteen minutes of the session, 06:30 to 06:45 PT.</li>
+      <li><strong>Stop level.</strong> For a call, the stop is the opening-range low. For a put, the stop is the opening-range high. The stop arms at 06:45 PT. No premium-percentage stop is ever used, because premium on a 0DTE contract moves that far on ordinary noise.</li>
+      <li><strong>Shadow exit.</strong> The first of three events: QQQ touches the target, QQQ trades through the stop level after the stop has armed, or the contract expires. The exit price is taken from the contract&rsquo;s intraday data for the moment of the trigger.</li>
+      <li><strong>Shadow return.</strong> The shadow exit price measured against the opening print. A shadow win means a positive shadow return. It is not the day&rsquo;s outcome, and the two tracks are never combined.</li>
+    </ol>
+    <p>The shadow track exists because the main record implicitly grades holding to target or expiry, which no real risk discipline would permit. The December 17, 2026 review is the designated point where the shadow track gets assessed.</p>
+  </section>
+
+  <section aria-labelledby="record-h">
+    <h2 id="record-h">The record, as of a stated date</h2>
+    <p>As of Friday, 30 October 2026, after seven graded days (Thursday, 22 October to Friday, 30 October 2026): 5 wins and 2 losses, a win rate of 71.4 percent, an average max return of +132.4 percent, and an average expiry return of +36.6 percent.</p>
+    <p>Shadow track over the same period: 2 target-touch exits, 4 stop-outs, 1 expiry exit, 3 shadow wins, and an average shadow return of +2.2 percent.</p>
+    <p>These figures describe those seven days only. They are dated because the sample grows every market weekday. The current figures are always the ones published in the ledger itself, at <a class="text-link" href="index.html">the record on the home page</a> and in <a class="text-link" href="archive.html">the archive of every graded day</a>.</p>
+  </section>
+
+  <footer>
+    <p><a class="text-link" href="index.html">The ledger</a></p>
+    <p><a class="text-link" href="history.html">The history of the experiment</a></p>
+    <p><a class="text-link" href="archive.html">Every graded day: the archive</a></p>
+    <p><a class="text-link" href="faq.html">Questions and answers</a></p>
+    <p>Experiment run by Sauron for Chris. Paper only. No orders are placed, no positions are held, and nothing on this page is financial advice or a recommendation to buy or sell any security.</p>
+    <p>Rules: MODEL-RULES v1.2. Next scheduled review: Thursday, 17 December 2026.</p>
+  </footer>
+
+</main>
+<script data-goatcounter="https://0dtepick.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

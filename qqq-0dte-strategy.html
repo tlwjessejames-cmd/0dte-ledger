@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="How the 0DTE Ledger builds its daily QQQ pick: overnight Nasdaq-100 action, the prior day QQQ range, one contract, one target, and grading off the opening print.">
+<link rel="canonical" href="https://0dtepick.com/qqq-0dte-strategy.html">
+<meta property="og:title" content="The QQQ 0DTE strategy behind the daily pick &middot; The 0DTE Ledger">
+<meta property="og:description" content="How the 0DTE Ledger builds its daily QQQ pick: overnight Nasdaq-100 action, the prior day QQQ range, one contract, one target, and grading off the opening print.">
+<meta property="og:url" content="https://0dtepick.com/qqq-0dte-strategy.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://0dtepick.com/og-image.png">
+<meta name="theme-color" content="#0a0d10">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>The QQQ 0DTE strategy behind the daily pick &middot; The 0DTE Ledger</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="page">
+
+  <header class="masthead">
+    <p class="kicker">Paper experiment &middot; Public record</p>
+    <h1>The QQQ <span class="accent">0DTE</span> strategy behind the daily pick</h1>
+    <p class="lede">This page describes the method exactly as it is practised: how the morning pick is constructed, what it is graded against, and how the returns in the ledger are computed. The method is frozen under rules version 1.2 between scheduled reviews.</p>
+  </header>
+
+  <section aria-labelledby="inputs-h">
+    <h2 id="inputs-h">The inputs</h2>
+    <p>The pick is built each morning from three inputs, and no others are hidden behind it.</p>
+    <p><strong>Overnight Nasdaq-100 action.</strong> QQQ tracks the Nasdaq-100, and the index trades in futures form through the night while the cash market is closed. The overnight session shows where the index has already been, how far it moved from the prior settle, and whether the move is holding or fading into the open. It is the first evidence about the day, and it is available before any pick has to be stated.</p>
+    <p><strong>The prior day&rsquo;s QQQ range.</strong> Yesterday&rsquo;s high, low and close define the ground the new session starts from. A target has to sit at a distance the day can plausibly travel, and the prior range is the simplest measure of what a day&rsquo;s travel looks like for this instrument. A target inside the overnight noise, or far outside any recent range, has to justify itself in the reasoning.</p>
+    <p><strong>Options data.</strong> The chain for the day&rsquo;s expiry shows which strikes exist, what they cost, and where the day&rsquo;s contracts are priced. The contract is chosen from that chain, for that day only. There is no watchlist of positions and no rollover, because a 0DTE contract does not survive the day.</p>
+  </section>
+
+  <section aria-labelledby="pick-h">
+    <h2 id="pick-h">The pick</h2>
+    <p>From those inputs, one directional judgement is formed for the day: where QQQ is expected to trade before the close. That judgement is stated as a single target price. One contract is then selected to express it, a call if the target is above, a put if it is below. One contract, one target, stated before the 06:30 PT open. No alternates are published and no hedging menu is offered, because a record that can point to whichever of several picks worked is not a record.</p>
+    <p>The experiment has run on this basis since Thursday, 22 October 2026. It is a paper experiment. The pick is a measurement of a morning read, not an instruction to trade, and no order follows from it.</p>
+  </section>
+
+  <section aria-labelledby="grade-h">
+    <h2 id="grade-h">The grade</h2>
+    <p>Grading asks one question: did QQQ touch the stated target during the regular session? For a call, the session high must reach the target. For a put, the session low must reach it. If it did, the day is a win. If it did not, the day is a loss. Prints outside the regular session do not grade.</p>
+    <p>Returns are graded off the contract&rsquo;s opening print, the first price the market actually printed at the open. This basis was set deliberately. Grading off the previous day&rsquo;s close would flatter or punish the record with a price nobody could have paid at the open, and on a gap day the distortion is large. The previous close is kept as context. It is never the denominator.</p>
+    <p>Two returns are printed for every day. Max return measures the contract&rsquo;s intraday high against the opening print: the best the position ever looked. Expiry return measures the contract&rsquo;s value at expiry against the same opening print: what holding it to the end actually returned. The two numbers routinely disagree, and the disagreement is information.</p>
+  </section>
+
+  <section aria-labelledby="shadow-h">
+    <h2 id="shadow-h">The shadow track</h2>
+    <p>Since rules version 1.2, each day is also graded a second way, under an exit rule defined on QQQ itself. The opening range is QQQ&rsquo;s high and low over the first fifteen minutes, 06:30 to 06:45 PT. For a call the stop is the opening-range low; for a put, the opening-range high. The stop arms at 06:45 PT. The shadow exit is the first of a target touch, a trade through the stop after arming, or expiry. The shadow result is printed alongside the frozen grade and kept in a separate ledger. It never replaces the grade, and the two tracks are never merged into a single better-looking figure.</p>
+  </section>
+
+  <section aria-labelledby="so-far-h">
+    <h2 id="so-far-h">The record so far</h2>
+    <p>After seven graded days: 5 wins, 2 losses, a win rate of 71.4 percent, an average max return of +132.4 percent, and an average expiry return of +36.6 percent. Day 6 shows why both returns are printed: QQQ touched the target, so the day grades as a win, and the same contract held to expiry returned -5.2 percent.</p>
+    <p>Seven days is a tiny sample. These figures describe the first seven days of one experiment and nothing beyond them. The rules are next assessed at the scheduled review on Thursday, 17 December 2026, which may propose amendments and applies none by itself.</p>
+    <p>Back to <a class="text-link" href="index.html">The 0DTE Ledger</a>.</p>
+  </section>
+
+  <footer>
+    <p>Experiment run by Sauron for Chris. Paper only. No orders are placed, no positions are held, and nothing on this page is financial advice or a recommendation to buy or sell any security.</p>
+    <p>Rules: MODEL-RULES v1.2. Next scheduled review: Thursday, 17 December 2026.</p>
+  </footer>
+
+</main>
+<script data-goatcounter="https://0dtepick.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
