@@ -1,1 +1,57 @@
-{"as_of":"2026-10-30","canonical_urls":{"archive":"https://0dtepick.com/archive.html","faq":"https://0dtepick.com/faq.html","history":"https://0dtepick.com/history.html","home":"https://0dtepick.com/","llms_txt":"https://0dtepick.com/llms.txt","methodology":"https://0dtepick.com/methodology.html","stats_json":"https://0dtepick.com/stats.json"},"description":"Public ledger of a paper experiment: one 0DTE QQQ options pick each market weekday, posted before the open and graded the same day under frozen rules.","experiment":"The 0DTE Ledger","financial_advice":false,"maxim":"The record is less important than the understanding.","orders_placed":false,"paper_only":true,"period":{"end":"2026-10-30","start":"2026-10-22"},"positions_held":false,"record":{"average_expiry_return_percent":36.6,"average_max_return_percent":132.4,"days_graded":7,"losses":2,"win_rate_percent":71.4,"wins":5},"rules":{"document":"MODEL-RULES","frozen_between_reviews":true,"grading_basis":"Contract opening print (rule v1.1). The previous day's close is context only and is never the denominator.","next_review":"2026-12-17","next_review_note":"The review may propose amendments; it applies none by itself.","returns_published":["max_return_percent","expiry_return_percent"],"version":"1.2","win_definition":"QQQ touches the stated target intraday in the regular session (session high reaches the target for a call; session low reaches it for a put)."},"shadow_track":{"alters_main_record":false,"average_shadow_return_percent":2.2,"basis":"Exit rule defined on QQQ: opening range 06:30 to 06:45 PT; stop is the opening-range low for a call and the opening-range high for a put; stop arms at 06:45 PT; exit is the first of target touch, post-arming stop breach, or expiry.","days":7,"expiry_exits":1,"rule":"v1.2","shadow_wins":3,"stop_outs":4,"target_touch_exits":2},"site":"https://0dtepick.com/","started":"2026-10-22"}
+{
+  "as_of": "2026-11-02",
+  "canonical_urls": {
+    "archive": "https://0dtepick.com/archive.html",
+    "faq": "https://0dtepick.com/faq.html",
+    "history": "https://0dtepick.com/history.html",
+    "home": "https://0dtepick.com/",
+    "llms_txt": "https://0dtepick.com/llms.txt",
+    "methodology": "https://0dtepick.com/methodology.html",
+    "stats_json": "https://0dtepick.com/stats.json"
+  },
+  "description": "Public ledger of a paper experiment: one 0DTE QQQ options pick each market weekday, posted before the open and graded the same day under frozen rules.",
+  "experiment": "The 0DTE Ledger",
+  "financial_advice": false,
+  "maxim": "The record is less important than the understanding.",
+  "orders_placed": false,
+  "paper_only": true,
+  "period": {
+    "end": "2026-11-02",
+    "start": "2026-10-22"
+  },
+  "positions_held": false,
+  "record": {
+    "average_expiry_return_percent": 19.5,
+    "average_max_return_percent": 123.2,
+    "days_graded": 8,
+    "losses": 3,
+    "win_rate_percent": 62.5,
+    "wins": 5
+  },
+  "rules": {
+    "document": "MODEL-RULES",
+    "frozen_between_reviews": true,
+    "grading_basis": "Contract opening print (rule v1.1). The previous day's close is context only and is never the denominator.",
+    "next_review": "2026-12-17",
+    "next_review_note": "The review may propose amendments; it applies none by itself.",
+    "returns_published": [
+      "max_return_percent",
+      "expiry_return_percent"
+    ],
+    "version": "1.2",
+    "win_definition": "QQQ touches the stated target intraday in the regular session (session high reaches the target for a call; session low reaches it for a put)."
+  },
+  "shadow_track": {
+    "alters_main_record": false,
+    "average_shadow_return_percent": -6.6,
+    "basis": "Exit rule defined on QQQ: opening range 06:30 to 06:45 PT; stop is the opening-range low for a call and the opening-range high for a put; stop arms at 06:45 PT; exit is the first of target touch, post-arming stop breach, or expiry.",
+    "days": 8,
+    "expiry_exits": 1,
+    "rule": "v1.2",
+    "shadow_wins": 3,
+    "stop_outs": 5,
+    "target_touch_exits": 2
+  },
+  "site": "https://0dtepick.com/",
+  "started": "2026-10-22"
+}

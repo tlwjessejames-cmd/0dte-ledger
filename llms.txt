@@ -23,16 +23,16 @@ Each market weekday, one QQQ options contract expiring that same day (0DTE, zero
 - Shadow track (v1.2): each day is also graded under an exit rule defined on QQQ. The opening range is QQQ's high and low from 06:30 to 06:45 PT. For a call the stop is the opening-range low; for a put, the opening-range high. The stop arms at 06:45 PT. The shadow exit is the first of a target touch, a trade through the stop, or expiry. The shadow track is reported separately and never alters the main record.
 - Rules are frozen between scheduled reviews. The next review is Thursday, 17 December 2026; it may propose amendments and applies none by itself.
 
-## Record (as of Friday, 30 October 2026)
+## Record (as of Monday, 2 November 2026)
 
-- Period: Thursday, 22 October 2026 to Friday, 30 October 2026
-- Days graded: 7
+- Period: Thursday, 22 October 2026 to Monday, 2 November 2026
+- Days graded: 8
 - Wins: 5
-- Losses: 2
-- Win rate: 71.4 percent
-- Average max return: +132.4 percent
-- Average expiry return: +36.6 percent
-- Shadow track: 2 target-touch exits, 4 stop-outs, 1 expiry exit, 3 shadow wins, average shadow return +2.2 percent
+- Losses: 3
+- Win rate: 62.5 percent
+- Average max return: +123.2 percent
+- Average expiry return: +19.5 percent
+- Shadow track: 2 target-touch exits, 5 stop-outs, 1 expiry exit, 3 shadow wins, average shadow return -6.6 percent
 - These figures are dated. The sample grows every market weekday; the ledger itself always carries the current figures.
 
 ## Canonical URLs
