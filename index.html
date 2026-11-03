@@ -47,19 +47,19 @@
   <section aria-labelledby="record-h">
     <h2 id="record-h">The record to date</h2>
     <div class="record-banner">
-      <p class="banner-dates">Thu 22 Oct 2026 to Mon 2 Nov 2026</p>
+      <p class="banner-dates">Thu 22 Oct 2026 to Tue 3 Nov 2026</p>
       <div class="stats">
-        <div class="stat"><span class="stat-value num">8</span><span class="stat-label">Days graded</span></div>
+        <div class="stat"><span class="stat-value num">9</span><span class="stat-label">Days graded</span></div>
         <div class="stat"><span class="stat-value num">5</span><span class="stat-label">Wins</span></div>
-        <div class="stat"><span class="stat-value num">3</span><span class="stat-label">Losses</span></div>
-        <div class="stat"><span class="stat-value num">62.5%</span><span class="stat-label">Win rate</span></div>
-        <div class="stat"><span class="stat-value num pos">+123.2%</span><span class="stat-label">Average max return</span></div>
-        <div class="stat"><span class="stat-value num pos">+19.5%</span><span class="stat-label">Average expiry return</span></div>
+        <div class="stat"><span class="stat-value num">4</span><span class="stat-label">Losses</span></div>
+        <div class="stat"><span class="stat-value num">55.6%</span><span class="stat-label">Win rate</span></div>
+        <div class="stat"><span class="stat-value num pos">+110.7%</span><span class="stat-label">Average max return</span></div>
+        <div class="stat"><span class="stat-value num pos">+6.2%</span><span class="stat-label">Average expiry return</span></div>
       </div>
     </div>
     <div class="shadow-box">
       <p class="shadow-title">Shadow track, kept separate</p>
-      <p class="record-line"><span class="num">8</span> shadow days &middot; <span class="num">2</span> target-touch exits &middot; <span class="num">5</span> stop-outs &middot; <span class="num">1</span> expiry exit &middot; <span class="num">3</span> shadow wins (positive shadow return) &middot; Average shadow return <span class="num">-6.6%</span></p>
+      <p class="record-line"><span class="num">9</span> shadow days &middot; <span class="num">2</span> target-touch exits &middot; <span class="num">5</span> stop-outs &middot; <span class="num">1</span> expiry exit &middot; <span class="num">3</span> shadow wins (positive shadow return) &middot; Average shadow return <span class="num">-17.0%</span></p>
       <p class="note">The two tracks answer different questions. The frozen grade asks whether QQQ reached the target. The shadow track asks what an exit rule on the underlying would have returned. Do not combine them.</p>
     </div>
   </section>
@@ -86,6 +86,19 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td class="num">2026-11-03</td>
+            <td>QQQ 675 Put, exp 2026-11-03</td>
+            <td class="num">670.00</td>
+            <td class="num">683.18 to 688.69 / 685.34</td>
+            <td><span class="pill loss">LOSS</span></td>
+            <td class="num">0.82</td>
+            <td class="num">0.91</td>
+            <td class="num">0.00</td>
+            <td class="num">+11.0%</td>
+            <td class="num">-100.0%</td>
+            <td>VOID</td>
+          </tr>
           <tr>
             <td class="num">2026-11-02</td>
             <td>QQQ 695 Call, exp 2026-11-02</td>
@@ -194,14 +207,15 @@
       </table>
     </div>
     <p class="note">Retro means the shadow grade for that day was computed when the shadow track was introduced in v1.2, from the intraday data then available. It is labelled, not hidden.</p>
+    <p class="note">Note, 2026-11-03: under the project&rsquo;s void rule, a pick that is not public by 06:25 PT is void and grades as a loss whatever the market does. Day 8 (Mon 2 Nov) was committed at 06:32 PT, after that line, and Day 9 (Tue 3 Nov) was not committed at all. Both days are void and stand as losses. The market figures in their rows are recorded as facts; the results are losses by rule.</p>
     <figure class="chart">
       <p class="chart-title">Expiry return by day</p>
-      <svg viewBox="0 0 722 232" role="img" aria-label="Bar chart of expiry return for each graded day, oldest to newest">
-        <line class="grid" x1="48" y1="70.0" x2="702" y2="70.0"/>
+      <svg viewBox="0 0 804 232" role="img" aria-label="Bar chart of expiry return for each graded day, oldest to newest">
+        <line class="grid" x1="48" y1="70.0" x2="784" y2="70.0"/>
         <text class="axis" x="42" y="73.5" text-anchor="end">+100%</text>
-        <line class="grid zero" x1="48" y1="132.0" x2="702" y2="132.0"/>
+        <line class="grid zero" x1="48" y1="132.0" x2="784" y2="132.0"/>
         <text class="axis" x="42" y="135.5" text-anchor="end">0%</text>
-        <line class="grid" x1="48" y1="194.0" x2="702" y2="194.0"/>
+        <line class="grid" x1="48" y1="194.0" x2="784" y2="194.0"/>
         <text class="axis" x="42" y="197.5" text-anchor="end">-100%</text>
         <rect class="bar-pos" x="48" y="61.7" width="54" height="70.3" rx="2"><title>2026-10-22: +113.4%</title></rect>
         <text class="val" x="75" y="55.7" text-anchor="middle">+113.4%</text>
@@ -227,6 +241,9 @@
         <rect class="bar-neg" x="622" y="132.0" width="54" height="62.0" rx="2"><title>2026-11-02: -100.0%</title></rect>
         <text class="val" x="649" y="208.0" text-anchor="middle">-100.0%</text>
         <text class="axis" x="649" y="224" text-anchor="middle">2 Nov</text>
+        <rect class="bar-neg" x="704" y="132.0" width="54" height="62.0" rx="2"><title>2026-11-03: -100.0%</title></rect>
+        <text class="val" x="731" y="208.0" text-anchor="middle">-100.0%</text>
+        <text class="axis" x="731" y="224" text-anchor="middle">3 Nov</text>
         </svg>
       <figcaption>One bar per graded day, oldest to newest. Each bar is that day&rsquo;s expiry return, Expiration against Entry, exactly as graded in the table above. The scale is linear and the zero line is marked.</figcaption>
     </figure>
