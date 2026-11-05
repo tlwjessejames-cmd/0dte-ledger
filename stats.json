@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-03",
+  "as_of": "2026-11-04",
   "canonical_urls": {
     "archive": "https://0dtepick.com/archive.html",
     "faq": "https://0dtepick.com/faq.html",
@@ -16,16 +16,16 @@
   "orders_placed": false,
   "paper_only": true,
   "period": {
-    "end": "2026-11-03",
+    "end": "2026-11-04",
     "start": "2026-10-22"
   },
   "positions_held": false,
   "record": {
-    "average_expiry_return_percent": 6.2,
-    "average_max_return_percent": 110.7,
-    "days_graded": 9,
-    "losses": 4,
-    "win_rate_percent": 55.6,
+    "average_expiry_return_percent": 0.2,
+    "average_max_return_percent": 118.9,
+    "days_graded": 10,
+    "losses": 5,
+    "win_rate_percent": 50.0,
     "wins": 5
   },
   "rules": {
@@ -43,9 +43,9 @@
   },
   "shadow_track": {
     "alters_main_record": false,
-    "average_shadow_return_percent": -17.0,
+    "average_shadow_return_percent": -20.7,
     "basis": "Exit rule defined on QQQ: opening range 06:30 to 06:45 PT; stop is the opening-range low for a call and the opening-range high for a put; stop arms at 06:45 PT; exit is the first of target touch, post-arming stop breach, or expiry.",
-    "days": 9,
+    "days": 10,
     "expiry_exits": 1,
     "rule": "v1.2",
     "shadow_wins": 3,
